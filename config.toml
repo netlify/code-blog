@@ -1,3 +1,11 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "code.netlify"
+title = "Netlify Engineering"
+author = "Netlify"
+copyright = "Netlify All rights reserved."
+
+[params]
+  logo      = "/img/logo.svg"
+  twitter   = "https://twitter.com/netlify"
+  github    = "https://github.com/netlify"
+  email     = "help@netlify.com"
