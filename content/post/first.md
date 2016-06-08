@@ -1,6 +1,6 @@
 +++
-date = "2016-06-08T11:12:17-07:00"
-draft = true
+date = "2016-06-06T11:12:17-07:00"
+draft = false
 title = "first"
 author = "Brian"
 
@@ -11,7 +11,7 @@ This is a test post
 
 Lo-fi humblebrag bitters, roof party small batch chambray pop-up butcher sriracha sartorial vegan messenger bag austin. Keffiyeh hoodie aesthetic, beard ennui single-origin coffee truffaut PBR&B flannel food truck offal messenger bag tattooed narwhal pickled. Farm-to-table craft beer messenger bag butcher godard green juice. Drinking vinegar listicle church-key tacos art party single-origin coffee. Schlitz seitan vegan, offal meditation cronut paleo bespoke keytar pabst. Banjo quinoa freegan, wayfarers ugh kitsch bespoke slow-carb brooklyn. Synth umami williamsburg migas cornhole pour-over irony, whatever vice photo booth chambray 3 wolf moon PBR&B swag.
 
-```go
+``` go
 func main() {
 As before we’ll count how many operations we perform.
     var ops int64 = 0
