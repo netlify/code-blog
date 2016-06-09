@@ -1,4 +1,4 @@
-# code.netlify
+# Netlify Engineering Blog
 
 ## Getting Started
 
@@ -18,28 +18,6 @@ $ hugo server --theme=hugo-zen --buildDrafts --watch
 
 ```bash
 $ hugo new post/new-thing.md
-```
-
-## Syntax Hylighting
-
-Syntax highlighting is being set in the `config.toml` and the overall
-style can be changed using the example color codes from [pygments-css](https://github.com/richleland/pygments-css).
-
-```
-# config.toml
-
-pygmentsuseclasses = false
-pygmentsstyle = "emacs"
-```
-
-example in markdown:
-
-```
-{{< highlight js >}}
-    function foo() => {
-      return 12;
-    }
-{{< /highlight >}}
 ```
 
 Theme configuration is [hugo-zen](https://gohugo.io/overview/configuration/)
