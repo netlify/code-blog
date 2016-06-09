@@ -219,6 +219,7 @@ hr {
  */
 
 pre {
+  padding: 10px 0;
   overflow: auto;
 }
 

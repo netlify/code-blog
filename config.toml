@@ -1,6 +1,9 @@
 baseurl = "/"
 languageCode = "en-us"
-highlighter = "pygments"
+pygmentsuseclasses = false
+pygmentsstyle = "manni"
+enableRobotsTXT = true
+enableEmoji = true
 title = "Netlify Engineering Blog"
 author = "Netlify"
 copyright = "Netlify All rights reserved."
