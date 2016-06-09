@@ -9,4 +9,4 @@ min_version = 0.13
 [author]
     name = "Netlify"
     homepage = "/"
-    logo = "img/logo.svg"
+    logo = "images/logo-transparent-square.png"

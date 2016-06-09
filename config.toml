@@ -1,11 +1,12 @@
 baseurl = "/"
 languageCode = "en-us"
+highlighter = "pygments"
 title = "Netlify Engineering Blog"
 author = "Netlify"
 copyright = "Netlify All rights reserved."
 
 [params]
-  logo      = "/img/logo.svg"
+  logo      = "/images/logo-transparent-square.png"
   twitter   = "https://twitter.com/netlify"
   github    = "https://github.com/netlify"
   email     = "help@netlify.com"
