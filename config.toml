@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-us"
-title = "Netlify Engineering"
+title = "Netlify Engineering Blog"
 author = "Netlify"
 copyright = "Netlify All rights reserved."
 
