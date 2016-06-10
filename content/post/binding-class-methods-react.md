@@ -2,7 +2,7 @@
 date = "2016-06-09T13:28:29-07:00"
 draft = false
 title = "Binding es6 class Methods React"
-categories = ["react", "javascript"]
+categories = ["react"]
 tags = ["tips", "javascript", "react", "es6"]
 
 +++
@@ -23,7 +23,7 @@ class LoginPage extends React.Component {
 
   onLogin(provider) {
     return (event) => {
-      ...
+      // ...
     };
   }
 
@@ -33,25 +33,33 @@ class LoginPage extends React.Component {
   }
 }
 ```
-Everytime you need to use a class function you need to either bind using
-a function `() => this.onLogin` or binding directly
-`this.onLogin.bind(this)`. The ladder won't pass the default settings
-for [eslint](http://eslint.org/docs/rules/no-extra-bind). The first
-option seems less hacky, but you have to redeclare a new function. 
+Everytime you need to use a class function you have two options: 
+
+```js
+const login = () => this.onLogin
+```
+*The problem here is need to create separate function to gain access to
+the lexically scoped **this**.*
+
+```js
+this.onLogin.bind(this)
+```
+
+*This will will not pass the default [eslint](http://eslint.org/docs/rules/no-extra-bind) settings.
 
 A new way to handling the the binding of class methods do this has arisen and it's actually pretty nice. Just add the `bind(this)` to the class's constructor.
 
 ```js
 constructor(props) {
   super(props);
-  ...
+    // ...
   this.onLogin = this.onLogin.bind(this);
 }
 
 ```
 
 Now you can call just call `this.onLogin` directly, which save a bit
-processing power by not need to create a new function:
+of typing and maybe a kb or two in minification.
 
 ```js
 class LoginPage extends React.Component {
@@ -62,7 +70,7 @@ class LoginPage extends React.Component {
 
   onLogin(provider) {
     return (event) => {
-      ...
+      // ...
     };
   }
 
