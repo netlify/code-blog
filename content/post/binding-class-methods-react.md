@@ -36,36 +36,38 @@ class LoginPage extends React.Component {
 Everytime you need to use a class function you have two options: 
 
 ```js
-const login = () => this.onLogin
+return <LoginForm handleLogin={this.onLogin.bind(this)} loginError={this.state.loginError}/>;
 ```
-*The problem here is need to create separate function to gain access to
-the lexically scoped **this**.*
+
+*This option will not pass the default [eslint](http://eslint.org/docs/rules/no-extra-bind) settings, due the unpopular use of bind in jsx.*
 
 ```js
-this.onLogin.bind(this)
+const login = () => this.onLogin
+return <LoginForm handleLogin={login} loginError={this.state.loginError}/>;
 ```
+*The problem here is the need to create a separate function to gain access to
+the lexically scoped `this`. This will create a new function object every time `render` is called* 
 
-*This will will not pass the default [eslint](http://eslint.org/docs/rules/no-extra-bind) settings.
 
 A new way to handling the the binding of class methods do this has arisen and it's actually pretty nice. Just add the `bind(this)` to the class's constructor.
 
 ```js
 constructor(props) {
   super(props);
-    // ...
+  // ...
   this.onLogin = this.onLogin.bind(this);
 }
-
 ```
 
 Now you can call just call `this.onLogin` directly, which save a bit
-of typing and maybe a kb or two in minification.
+of typing and maybe a `kb` or two in minification.
 
 ```js
 class LoginPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {loginError: null};
+    // ...
+    this.onLogin = this.onLogin.bind(this);
   }
 
   onLogin(provider) {
@@ -74,12 +76,13 @@ class LoginPage extends React.Component {
     };
   }
 
+  // this.onLogin will now just use the function defined
+  // in the constructor no need to create a whole new function
+
   render() {
     const login = () => this.onLogin.bind;
     return <LoginForm handleLogin={this.onLogin} loginError={this.state.loginError}/>;
   }
 }
-
 ```
-
 How do you handle binding class methods in React, what are your thoughts?
