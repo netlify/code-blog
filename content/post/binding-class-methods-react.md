@@ -1,13 +1,13 @@
 +++
 date = "2016-06-09T13:28:29-07:00"
 draft = false
-title = "Binding es6 class Methods React"
+title = "Binding ES Class Methods React"
 categories = ["react"]
 tags = ["tips", "javascript", "react", "es6"]
 
 +++
 
-The choice between using the es6 `class` method for declaring component in
+The choice between using the ES `class` method for declaring component in
 React seems to be a decided convention within the React community. The
 only issue with it the need to bind the context of `this` everytime you
 create a function. This way you have 
