@@ -85,4 +85,4 @@ class LoginPage extends React.Component {
   }
 }
 ```
-How do you handle binding class methods in React, what are your thoughts?
+## How do you handle binding class methods in React, what are your thoughts?
