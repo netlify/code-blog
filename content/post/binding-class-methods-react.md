@@ -1,7 +1,7 @@
 +++
 date = "2016-06-09T13:28:29-07:00"
 draft = false
-title = "Binding ES Class Methods React"
+title = "Binding ES Class Methods in React"
 categories = ["react"]
 tags = ["tips", "javascript", "react", "es6"]
 
