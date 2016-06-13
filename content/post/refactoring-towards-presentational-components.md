@@ -1,5 +1,5 @@
 +++
-date = "2016-06-09T17:47:08-07:00"
+date = "2016-06-13T17:47:08-07:00"
 draft = false
 title = "Refactoring towards Presentational Components in React"
 categories = ["react"]
@@ -10,7 +10,7 @@ Since working with React I have notice a frequent change in the way Components a
 
 I am currently rewriting some code for the Netlify site and see some low hanging fruit for the use of Presentational Components. 
 
-For those unfamiliar there a few type of Components in React. 
+For those unfamiliar there a few type of Components in React: 
 
 ## Container
 
@@ -18,7 +18,7 @@ This is a smart component that understand knowledge of it surroundings, includin
 
 ## Smart Component
 
-This component is aware of it’s own state and even uses other functions to help out with that task. In addition to presenting props and it also can manipulate it’s own state, which makes things a little more challenging to test and present.
+This component is aware of its own state and even uses other functions to help out with that task. In addition to presenting props and it also can manipulate it’s own state, which makes things a little more challenging to test and present.
 
 ## Presentational/Stateless
 
@@ -160,7 +160,7 @@ const Plans = ({subscribedPlan, onSelection}) => {
 export default Plans;
 ```
 
-Finally I deleted all the functions in the Smart Component and present the newly formed **<Plans />** component on line 30. Overall I am now dealing with less lines of in my Smart Component and now able to reuse the PlanMenu anywhere else.
+Finally I deleted all the functions in the Smart Component and present the newly formed **<Plans />** component on line 30. Overall I am now dealing with less lines in my Smart Component. I am also now able to reuse the PlanMenu anywhere else.
 
 ```js
 import React from 'react';
