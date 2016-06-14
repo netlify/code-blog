@@ -74,3 +74,17 @@ main {
   background: -webkit-linear-gradient(left, white, #E1E1E1, white);
   background: linear-gradient(to right, white, #E1E1E1, white);
 }
+
+.tags {
+  display: flex;
+  list-style: none;
+}
+
+.tags a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.tags li {
+  padding-right: 10px;
+}

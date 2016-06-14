@@ -1,6 +1,12 @@
 {{ partial "header.html" . }}
 
 	<main role="main">
+  <!-- commented out until we have a categor other than React -->
+  <!-- <ul class="tags" id="all-tags"> -->
+  <!--   {{ range $name, $taxonomy := .Site.Taxonomies.categories }} -->
+  <!--   <li><a href="/categories/{{ $name | urlize }}">{{ $name }}</a></li> -->
+  <!--   {{ end }} -->
+  <!-- </ul> -->
 {{ range (where .Data.Pages ".Params.hidefromhome" "!=" "true") }}
 		<article itemscope itemtype="http://schema.org/Blog">
 			<h2 class="entry-title" itemprop="headline"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
